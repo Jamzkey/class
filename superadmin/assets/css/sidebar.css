@@ -1,0 +1,64 @@
+/* Default Sidebar Styles */
+#sidebar-menu {
+    width: 250px;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#sidebar-menu .menu-item span {
+    display: inline-block;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    margin-left: 10px; /* Add spacing for better UI */
+}
+
+/* Collapsed Sidebar Styles */
+#wrapper.enlarged #sidebar-menu {
+    width: 70px;
+}
+
+#wrapper.enlarged #sidebar-menu .menu-item span {
+    opacity: 0;
+    pointer-events: none; /* Disable interaction with hidden text */
+}
+
+.left-side-menu {
+    width: 250px;
+    transition: all 0.3s ease;
+}
+
+.left-side-menu.collapsed {
+    width: 80px;
+}
+
+.left-side-menu .menu-text {
+    display: inline-block;
+    transition: opacity 0.3s ease;
+}
+
+.left-side-menu.collapsed .menu-text {
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+}
+
+.left-side-menu.collapsed .menu-arrow {
+    display: none;
+}
+
+.left-side-menu .menu-title {
+    display: inline-block;
+}
+
+.left-side-menu.collapsed .menu-title {
+    display: none;
+}
+.nav-second-level {
+    display: none;
+    margin-left: 20px; /* Indent for submenus */
+}
+
+.has-submenu.active .nav-second-level {
+    display: block;
+}
